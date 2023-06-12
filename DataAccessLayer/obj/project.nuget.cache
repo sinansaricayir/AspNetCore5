@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hwg3HbjUm7IE530cK0/DAQp2V+F76rjNh2xLqEuexGQM7v4LwOhOgIol/oU8zqQs1cTIHha9+Rk+LJcjkjjvpA==",
+  "dgSpecHash": "379Mu7poEUgYMOBNEOx85LPdRqnTq/jDyubelWbW+TxFxYpWCZzJ8v9802B1bGyq15vTl+NfZuTF7+bcRuplug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sinan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sinan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

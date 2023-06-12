@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jTB8IVukS8UwlZRuR0du8TPnV9KMxfwxi/L7vhFJ5iHjAJ0c56dFwx03O6TYJc0Epg0Oy/XqAb7FWXeTDBzTTA==",
+  "dgSpecHash": "1S7uf/lMGNys/I/1l6hNipKhFEFtPPylo6LsItR+kK3gIjV1wNA0MsFw2aVO+65QzEz/caX58p1H1k0N/iQpiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\Core_Proje\\Core_Proje.csproj",
+  "projectFilePath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\Core_Proje\\Core_Proje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sinan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sinan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

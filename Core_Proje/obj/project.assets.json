@@ -5866,11 +5866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\Core_Proje\\Core_Proje.csproj",
+      "projectUniqueName": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\Core_Proje\\Core_Proje.csproj",
       "projectName": "Core_Proje",
-      "projectPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\Core_Proje\\Core_Proje.csproj",
+      "projectPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\Core_Proje\\Core_Proje.csproj",
       "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\Core_Proje\\obj\\",
+      "outputPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\Core_Proje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5887,14 +5887,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sinan\\source\\repos\\Core_Proje\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config",
