@@ -232,3 +232,4 @@ C:\Users\Sinan\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor
 C:\Users\Sinan\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Default\HeadPartial.cshtml.g.cs
 C:\Users\Sinan\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Default\NavbarPartial.cshtml.g.cs
 C:\Users\Sinan\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\FeatureList\Default.cshtml.g.cs
+C:\Users\Sinan\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\AboutList\Default.cshtml.g.cs
