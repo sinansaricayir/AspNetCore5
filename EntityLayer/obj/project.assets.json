@@ -5798,19 +5798,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sinan\\.nuget\\packages\\": {}
+    "C:\\Users\\SSA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
-      "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\obj\\",
+      "projectPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
+      "packagesPath": "C:\\Users\\SSA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SSA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5875,5 +5875,35 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IO.FileSystem 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
+      "libraryId": "System.IO.FileSystem"
+    },
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.NETCore.Targets 1.1.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
+      "libraryId": "Microsoft.NETCore.Targets"
+    },
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Globalization.Extensions 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
+      "libraryId": "System.Globalization.Extensions"
+    },
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Reflection.Emit.ILGeneration 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
+      "libraryId": "System.Reflection.Emit.ILGeneration"
+    }
+  ]
 }
