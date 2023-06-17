@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,14 @@ namespace Core_Proje.ViewComponents.Skill
 {
     public class SkillList : ViewComponent
     {
-        SkillManager skillManager = new SkillManager();
+        SkillManager skillManager = new SkillManager(new EfSkillDal());
+
         public IViewComponentResult Invoke()
         {
-            return View();
+            var values = skillManager.TGetList();
+            return View(values);
         }
     }
+
 }
+
