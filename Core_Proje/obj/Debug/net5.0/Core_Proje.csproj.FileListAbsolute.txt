@@ -392,3 +392,4 @@ C:\Users\SSA\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Pr
 C:\Users\SSA\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.genruntimeconfig.cache
 C:\Users\SSA\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\ServiceList\Default.cshtml.g.cs
 C:\Users\SSA\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\SkillList\Default.cshtml.g.cs
+C:\Users\SSA\Desktop\Projeler\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\PortfolioList\Default.cshtml.g.cs
