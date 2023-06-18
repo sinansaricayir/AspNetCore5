@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tibC5cvZizc1AbFr84z1V+pKFW0UkDa5cLlp+a+9W1djCQP0K5cRria52uMQiIicjbWjE+N1uzjEV2XTThwIrQ==",
+  "dgSpecHash": "tyVchX9tU9PHYfwz3E/VlfLkhiaRWfK5nCDQVa9Z0lGObpsFoDcZWcn2hfMC3FceujxWOEiSw5NG+wCh2pY5Sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSA\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\SSA\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

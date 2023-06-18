@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\SSA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SSA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\SSA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SSA\\AppData\\Roaming\\NuGet\\NuGet.Config",

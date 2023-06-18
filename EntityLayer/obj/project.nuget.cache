@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1TwTkJQmE5oNd2O2uNa4bxjZjbDgWkMhGKJQgGb7B2H7z4D7OdLrP3yrbhZ62wealqJ6luLyc3AQMeUi0wCXgw==",
+  "dgSpecHash": "8f6vf0BNkQAnnlI2O8DCpgJhWdjxV3Pfz+iaF+43PKx/YvPhD5rfee7KFGBZ2ilOEU5QjQNlXzrBMwEq5ntjUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSA\\Desktop\\Projeler\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSA\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\SSA\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -102,34 +102,5 @@
     "C:\\Users\\SSA\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\SSA\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.IO.FileSystem 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "System.IO.FileSystem"
-    },
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.NETCore.Targets 1.1.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "Microsoft.NETCore.Targets"
-    },
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Globalization.Extensions 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "System.Globalization.Extensions"
-    },
-    {
-      "code": "NU3037",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Reflection.Emit.ILGeneration 4.3.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository primary signature validity period has expired.",
-      "libraryId": "System.Reflection.Emit.ILGeneration"
-    }
-  ]
+  "logs": []
 }
