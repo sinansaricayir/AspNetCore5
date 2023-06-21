@@ -14,6 +14,9 @@ namespace Core_Proje.Controllers
         SkillManager skillManager = new SkillManager(new EfSkillDal());
         public IActionResult Index()
         {
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenekler Listesi";
             var values = skillManager.TGetList();
             return View(values);
         }
@@ -21,6 +24,9 @@ namespace Core_Proje.Controllers
         [HttpGet]
         public IActionResult AddSkill()
         {
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Ekle";
             return View();
         }
 
@@ -31,11 +37,30 @@ namespace Core_Proje.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpDelete]
-        public IActionResult DeleteSkill(Skill skill)
+        
+        public IActionResult DeleteSkill(int id)
         {
+            var skill = skillManager.TGetById(id);
             skillManager.TDelete(skill);
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult EditSkill(int id)
+        {
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Güncelle";
+            var skill=skillManager.TGetById(id);
+            return View(skill);
+        }
+
+        [HttpPost]
+        public IActionResult EditSkill(Skill skill)
+        {
+            skillManager.TUpdate(skill);
+            return RedirectToAction("Index");
+
         }
     }
 }
