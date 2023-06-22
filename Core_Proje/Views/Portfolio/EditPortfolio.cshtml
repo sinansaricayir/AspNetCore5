@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Portfolio
+@{
+    ViewData["Title"] = "EditPortfolio";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Portfolio Güncelleme Sayfası</h3>
+</div>
+
+<form class="form-group mt-4" method="post">
+
+    @Html.HiddenFor(x=>x.PortfolioID)
+
+    <br />
+
+    @Html.Label("Proje Adı")
+    <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    <br />
+
+    @Html.Label("Resim 1")
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
+    <br />
+
+    @Html.Label("Resim 2")
+    <input type="text" name="ImageUrl2" value="@Model.ImageUrl2" class="form-control" />
+    <br />
+
+    @Html.Label("Proje Url")
+    <input type="text" name="ProjectUrl" value="@Model.ProjectUrl" class="form-control" />
+    <br />
+
+    <button type="submit" class="btn btn-info">Güncelle</button>
+</form>

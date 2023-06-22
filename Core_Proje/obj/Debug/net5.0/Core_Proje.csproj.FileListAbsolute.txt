@@ -571,3 +571,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Experience\Index.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Experience\AddExperience.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Experience\EditExperience.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Portfolio\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Portfolio\AddPortfolio.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Portfolio\EditPortfolio.cshtml.g.cs

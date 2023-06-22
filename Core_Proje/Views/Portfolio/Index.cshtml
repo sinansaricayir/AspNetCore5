@@ -1,0 +1,60 @@
+﻿@using EntityLayer.Concrete
+@model List<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Proje Listesi Tablosu</h3>
+</div>
+<!-- Light table -->
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col" class="sort" data-sort="name">#</th>
+                <th scope="col" class="sort" data-sort="budget">Proje Adı</th>
+                <th scope="col" class="sort" data-sort="completion">Resimler</th>
+                <th scope="col" class="sort" data-sort="completion">Proje Url</th>
+                <th scope="col" class="sort" data-sort="budget">Sil</th>
+                <th scope="col" class="sort" data-sort="budget">Düzenle</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <th scope="row">
+                    @item.PortfolioID
+                </th>
+                <th class="budget">
+                    @item.Name
+                </th>
+                <td>
+                    <div class="avatar-group">
+                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
+                            <img alt="@item.Name" src="@item.ImageUrl">
+                        </a>
+                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
+                            <img alt="@item.Name" src="@item.ImageUrl2">
+                        </a>
+                    </div>
+                </td>
+                <td class="budget">
+                    @item.ProjectUrl
+                </td>
+                <td>
+                    <a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-danger" data-confirm="Bu proje kaydını silmek istediğinizden emin misiniz?">Sil</a>
+                </td>
+                <td>
+                    <a href="/Portfolio/EditPortfolio/@item.PortfolioID" class="btn btn-primary">Düzenle</a>
+                </td>
+                <td></td>
+            </tr>
+            }
+    </table>
+</div>
+<br />
+<a href="/Portfolio/AddPortfolio" class="btn btn-info">Proje Ekle</a>

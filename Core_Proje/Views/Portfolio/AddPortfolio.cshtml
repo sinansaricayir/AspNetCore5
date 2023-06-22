@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "AddPortfolio";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Portfolio Ekleme Sayfası</h3>
+</div>
+
+<form class="form-group mt-4" method="post">
+
+    <br />
+
+    @Html.Label("Proje Adı")
+    <input type="text" name="Name" value="" class="form-control" />
+    <br />
+
+    @Html.Label("Resim 1")
+    <input type="text" name="ImageUrl" value="" class="form-control" />
+    <br />
+
+    @Html.Label("Resim 2")
+    <input type="text" name="ImageUrl2" value="" class="form-control" />
+    <br />
+
+    @Html.Label("Proje Url")
+    <input type="text" name="ProjectUrl" value="" class="form-control" />
+    <br />
+
+    <button type="submit" class="btn btn-info">Ekle</button>
+</form>
