@@ -43,5 +43,22 @@ namespace Core_Proje.Controllers
             experienceManager.TDelete(experience);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult EditExperience(int id)
+        {
+            ViewBag.v1 = "Deneyimler Listesi";
+            ViewBag.v2 = "Deneyimler";
+            ViewBag.v3 = "Deneyimler Düzenle";
+            var experince = experienceManager.TGetById(id);
+            return View(experince);
+        }
+
+        [HttpPost]
+        public IActionResult EditExperience(Experience experience)
+        {
+            experienceManager.TUpdate(experience);
+            return RedirectToAction("Index");
+        }
     }
 }

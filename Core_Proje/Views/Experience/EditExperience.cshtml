@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Experience
+@{
+    ViewData["Title"] = "EditExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Deneyim Düzenleme Sayfası</h3>
+</div>
+
+<form class="form-group mt-4" method="post">
+    <br />
+
+    <input type="hidden" name="ExperienceID" value="@Model.ExperienceID" class="form-control" />
+
+    <br />
+
+    @Html.Label("Yetenek Adı")
+    <input type="text" name="ExperienceName" value="@Model.ExperienceName" class="form-control" />
+
+    <br />
+
+    @Html.Label("Yetenek Oranı")
+    <input type="text" name="Date" value="@Model.Date" class="form-control" />
+    <br />
+
+    @Html.Label("Yetenek Oranı")
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
+    <br />
+
+    @Html.Label("Yetenek Oranı")
+    <input type="text" name="Description" value="@Model.Description" class="form-control" />
+    <br />
+
+    @Html.Label("Yetenek Oranı")
+    <input type="text" name="CompanyName" value="@Model.CompanyName" class="form-control" />
+    <br />
+
+    <button type="submit" class="btn btn-info">Güncelle</button>
+</form>
