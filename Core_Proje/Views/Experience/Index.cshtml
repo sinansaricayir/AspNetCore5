@@ -27,33 +27,33 @@
         <tbody class="list">
             @foreach (var item in Model)
             {
-            <tr>
-                <th scope="row">
-                    @item.ExperienceID
-                </th>
-                <th class="budget">
-                    @item.ExperienceName
-                </th>
-                <td>
-                    @item.Date
-                </td>
-                <td>
-                    @item.ImageUrl
-                </td>
-                <td>
-                    @item.Description
-                </td>
-                <td>
-                    @item.CompanyName
-                </td>
-                <td>
-                    <a href="/Experience/DeleteExperience/@item.ExperienceID" class="btn btn-danger">Sil</a>
-                </td>
-                <td>
-                    <a href="/Experience/EditExperience/@item.ExperienceID" class="btn btn-primary">Düzenle</a>
-                </td>
-                <td></td>
-            </tr>
+                <tr>
+                    <th scope="row">
+                        @item.ExperienceID
+                    </th>
+                    <th class="budget">
+                        @item.ExperienceName
+                    </th>
+                    <td>
+                        @item.Date
+                    </td>
+                    <td>
+                        @item.ImageUrl
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.CompanyName
+                    </td>
+                    <td>
+                        <a href="/Experience/DeleteExperience/@item.ExperienceID" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz ?')">Sil</a>
+                    </td>
+                    <td>
+                        <a href="/Experience/EditExperience/@item.ExperienceID" class="btn btn-primary">Düzenle</a>
+                    </td>
+                    <td></td>
+                </tr>
             }
     </table>
 </div>

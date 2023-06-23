@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,7 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Deneyimler";
             ViewBag.v3 = "Deneyimler Listesi";
             var values = experienceManager.TGetList();
+
             return View(values);
         }
 
@@ -27,20 +30,41 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Deneyimler Listesi";
             ViewBag.v2 = "Deneyimler";
             ViewBag.v3 = "Deneyimler Ekle";
+
             return View();
         }
 
         [HttpPost]
         public IActionResult AddExperience(Experience experience)
         {
-            experienceManager.TAdd(experience);
-            return RedirectToAction("Index");
+            ViewBag.v1 = "Deneyimler Listesi";
+            ViewBag.v2 = "Deneyimler";
+            ViewBag.v3 = "Deneyimler Ekle";
+
+            ExperienceValidator validations = new ExperienceValidator();
+            ValidationResult results = validations.Validate(experience);
+
+            if (results.IsValid)
+            {
+                experienceManager.TAdd(experience);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
 
         public IActionResult DeleteExperience(int id)
         {
             var experience = experienceManager.TGetById(id);
             experienceManager.TDelete(experience);
+
             return RedirectToAction("Index");
         }
 
@@ -50,15 +74,36 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Deneyimler Listesi";
             ViewBag.v2 = "Deneyimler";
             ViewBag.v3 = "Deneyimler Düzenle";
+
             var experince = experienceManager.TGetById(id);
+
             return View(experince);
         }
 
         [HttpPost]
         public IActionResult EditExperience(Experience experience)
         {
-            experienceManager.TUpdate(experience);
-            return RedirectToAction("Index");
+            ViewBag.v1 = "Deneyimler Listesi";
+            ViewBag.v2 = "Deneyimler";
+            ViewBag.v3 = "Deneyimler Düzenle";
+
+            ExperienceValidator validation = new ExperienceValidator();
+            ValidationResult results = validation.Validate(experience);
+
+            if (results.IsValid)
+            {
+                experienceManager.TUpdate(experience);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
     }
 }

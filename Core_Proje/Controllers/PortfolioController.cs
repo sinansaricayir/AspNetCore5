@@ -19,6 +19,7 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Proje Listesi";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Listesi";
+
             var values = portfolioManager.TGetList();
             return View(values);
         }
@@ -29,6 +30,7 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Proje Ekle";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Ekle";
+
             return View();
         }
 
@@ -39,6 +41,7 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Proje Ekle";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Ekle";
+
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult results = validations.Validate(portfolio);
 
@@ -61,6 +64,7 @@ namespace Core_Proje.Controllers
         {
             var portfolio = portfolioManager.TGetById(id);
             portfolioManager.TDelete(portfolio);
+
             return RedirectToAction("Index");
         }
 
@@ -70,6 +74,7 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Proje Düzenle";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Düzenle";
+
             var portfolio = portfolioManager.TGetById(id);
             return View(portfolio);
         }
@@ -77,6 +82,10 @@ namespace Core_Proje.Controllers
         [HttpPost]
         public IActionResult EditPortfolio(Portfolio portfolio)
         {
+            ViewBag.v1 = "Proje Düzenle";
+            ViewBag.v2 = "Projeler";
+            ViewBag.v3 = "Proje Düzenle";
+
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult results = validations.Validate(portfolio);
 

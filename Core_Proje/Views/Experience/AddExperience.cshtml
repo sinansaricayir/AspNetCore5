@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrete.Experience
 @{
     ViewData["Title"] = "AddExperience";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -8,28 +8,34 @@
     <h3 class="mb-0">Deneyim Ekleme Sayfası</h3>
 </div>
 
-<form class="form-group mt-4" method="post">
+@using (Html.BeginForm("AddExperience", "Experience", FormMethod.Post))
+{
     <br />
-    @Html.Label("Deneyim Adı")
-    <input type="text" name="ExperienceName" value="" class="form-control" />
 
+    @Html.Label("Deneyim Adı")
+    @Html.TextBoxFor(x => x.ExperienceName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ExperienceName, null, new { @class = "text-danger" })
     <br />
 
     @Html.Label("Tarih")
-    <input type="text" name="Date" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Date, null, new { @class = "text-danger" })
     <br />
 
     @Html.Label("Resim")
-    <input type="text" name="ImageUrl" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
     <br />
 
     @Html.Label("Açıklama")
-    <textarea  name="Description" class="form-control"></textarea>
+    @Html.TextAreaFor(x => x.Description, 10, 3, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
     <br />
 
     @Html.Label("Şirket Adı")
-    <input type="text" name="CompanyName" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CompanyName, null, new { @class = "text-danger" })
     <br />
-    <button type="submit" class="btn btn-info">Ekle</button>
-</form>
 
+    <button type="submit" class="btn btn-info">Ekle</button>
+}
