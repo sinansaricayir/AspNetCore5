@@ -579,3 +579,8 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\FluentValid
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Service\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Service\AddService.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Service\EditService.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\_NewAdminLAyout.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Test\Index.cshtml.g.cs
