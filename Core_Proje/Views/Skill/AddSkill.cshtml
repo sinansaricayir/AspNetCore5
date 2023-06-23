@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrete.Skill
 @{
     ViewData["Title"] = "AddSkill";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -8,16 +8,21 @@
     <h3 class="mb-0">Yetenek Ekleme Sayfası</h3>
 </div>
 
-<form class="form-group mt-4" method="post">
+@using (Html.BeginForm("AddSkill", "Skill", FormMethod.Post))
+{
     <br />
     @Html.Label("Yetenek Adı")
-    <input type="text" name="Title" value="" class="form-control"/>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
 
     <br />
 
     @Html.Label("Yetenek Oranı")
-    <input type="text" name="Value" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.Value, new { @class = "form-control" }) 
+    @Html.ValidationMessageFor(x => x.Value, null, new { @class = "text-danger" })
+
     <br />
+
     <button type="submit" class="btn btn-info">Ekle</button>
-</form>
+}
 

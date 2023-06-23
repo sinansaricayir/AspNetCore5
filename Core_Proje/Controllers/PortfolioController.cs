@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -34,8 +36,25 @@ namespace Core_Proje.Controllers
         [HttpPost]
         public IActionResult AddPortfolio(Portfolio portfolio)
         {
-            portfolioManager.TAdd(portfolio);
-            return RedirectToAction("Index");
+            ViewBag.v1 = "Proje Ekle";
+            ViewBag.v2 = "Projeler";
+            ViewBag.v3 = "Proje Ekle";
+            PortfolioValidator validations = new PortfolioValidator();
+            ValidationResult results = validations.Validate(portfolio);
+
+            if (results.IsValid)
+            {
+                portfolioManager.TAdd(portfolio);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
 
         public IActionResult DeletePortfolio(int id)
@@ -58,8 +77,23 @@ namespace Core_Proje.Controllers
         [HttpPost]
         public IActionResult EditPortfolio(Portfolio portfolio)
         {
-            portfolioManager.TUpdate(portfolio);
-            return RedirectToAction("Index");
+            PortfolioValidator validations = new PortfolioValidator();
+            ValidationResult results = validations.Validate(portfolio);
+
+            if (results.IsValid)
+            {
+                portfolioManager.TUpdate(portfolio);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
     }
 }

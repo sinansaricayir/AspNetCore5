@@ -46,7 +46,7 @@
                     @item.ProjectUrl
                 </td>
                 <td>
-                    <a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-danger" data-confirm="Bu proje kaydını silmek istediğinizden emin misiniz?">Sil</a>
+                    <a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a>
                 </td>
                 <td>
                     <a href="/Portfolio/EditPortfolio/@item.PortfolioID" class="btn btn-primary">Düzenle</a>

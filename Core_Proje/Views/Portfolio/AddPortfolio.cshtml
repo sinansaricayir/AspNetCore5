@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrete.Portfolio
 @{
     ViewData["Title"] = "AddPortfolio";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -8,25 +8,30 @@
     <h3 class="mb-0">Portfolio Ekleme Sayfası</h3>
 </div>
 
-<form class="form-group mt-4" method="post">
-
+@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
+{
     <br />
 
     @Html.Label("Proje Adı")
-    <input type="text" name="Name" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
+
     <br />
 
     @Html.Label("Resim 1")
-    <input type="text" name="ImageUrl" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
     <br />
 
     @Html.Label("Resim 2")
-    <input type="text" name="ImageUrl2" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl2, null, new { @class = "text-danger" })
     <br />
 
     @Html.Label("Proje Url")
-    <input type="text" name="ProjectUrl" value="" class="form-control" />
+    @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl2, null, new { @class = "text-danger" })
     <br />
 
     <button type="submit" class="btn btn-info">Ekle</button>
-</form>
+}

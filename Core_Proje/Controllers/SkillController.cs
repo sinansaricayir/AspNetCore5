@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -33,11 +35,29 @@ namespace Core_Proje.Controllers
         [HttpPost]
         public IActionResult AddSkill(Skill skill)
         {
-            skillManager.TAdd(skill);
-            return RedirectToAction("Index");
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Ekle";
+            SkillValidator validations = new SkillValidator();
+            ValidationResult results = validations.Validate(skill);
+
+            if (results.IsValid)
+            {
+                skillManager.TAdd(skill);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
 
-        
+
         public IActionResult DeleteSkill(int id)
         {
             var skill = skillManager.TGetById(id);
@@ -51,16 +71,34 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Yetenek Listesi";
             ViewBag.v2 = "Yetenekler";
             ViewBag.v3 = "Yetenek Güncelle";
-            var skill=skillManager.TGetById(id);
+            var skill = skillManager.TGetById(id);
             return View(skill);
         }
 
         [HttpPost]
         public IActionResult EditSkill(Skill skill)
         {
-            skillManager.TUpdate(skill);
-            return RedirectToAction("Index");
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Güncelle";
 
+            SkillValidator validations = new SkillValidator();
+            ValidationResult results = validations.Validate(skill);
+
+            if (results.IsValid)
+            {
+                skillManager.TUpdate(skill);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach(var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName,item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
     }
 }
