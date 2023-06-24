@@ -2,55 +2,74 @@
 @model List<Skill>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Yetenek Listesi Tablosu</h3>
+
+<div class="d-flex justify-content-end mb-4">
+    <a href="/Skill/AddSkill" class="btn btn-success">+ Yeni Yetenek Ekle</a>
 </div>
-<!-- Light table -->
-<div class="table-responsive">
-    <table class="table align-items-center table-flush">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col" class="sort" data-sort="name">#</th>
-                <th scope="col" class="sort" data-sort="budget">Başlık</th>
-                <th scope="col" class="sort" data-sort="completion">Oran</th>
-                <th scope="col" class="sort" data-sort="budget">Sil</th>
-                <th scope="col" class="sort" data-sort="budget">Düzenle</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody class="list">
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <th scope="row">
-                        @item.SkillID
-                    </th>
-                    <td class="budget">
-                        @item.Title
-                    </td>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <span class="completion mr-2">@item.Value%</span>
-                            <div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100" style="width: @item.Value%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a>
-                    </td>
-                    <td>
-                        <a href="/Skill/EditSkill/@item.SkillID" class="btn btn-primary">Düzenle</a>
-                    </td>
-                    <td></td>
-                </tr>
-            }
-    </table>
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Başlık</th>
+                                <th>Oran</th>
+                                <th class="text-center">Sil</th>
+                                <th class="text-center">Düzenle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">
+                                        @item.SkillID
+                                    </th>
+                                    <td class="budget">
+                                        @item.Title
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: @item.Value%" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100">%@item.Value</div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="/Skill/EditSkill/@item.SkillID" class="btn btn-outline-primary">Düzenle</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<br />
-<a href="/Skill/AddSkill" class="btn btn-info">Yetenek Ekle</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,59 +2,71 @@
 @model List<Portfolio>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Proje Listesi Tablosu</h3>
+
+<div class="d-flex justify-content-end mb-4">
+    <a href="/Portfolio/AddPortfolio" class="btn btn-success">+ Yeni Proje Ekle</a>
 </div>
-<!-- Light table -->
-<div class="table-responsive">
-    <table class="table align-items-center table-flush">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col" class="sort" data-sort="name">#</th>
-                <th scope="col" class="sort" data-sort="budget">Proje Adı</th>
-                <th scope="col" class="sort" data-sort="completion">Resimler</th>
-                <th scope="col" class="sort" data-sort="completion">Proje Url</th>
-                <th scope="col" class="sort" data-sort="budget">Sil</th>
-                <th scope="col" class="sort" data-sort="budget">Düzenle</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody class="list">
-            @foreach (var item in Model)
-            {
-            <tr>
-                <th scope="row">
-                    @item.PortfolioID
-                </th>
-                <th class="budget">
-                    @item.Name
-                </th>
-                <td>
-                    <div class="avatar-group">
-                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
-                            <img alt="@item.Name" src="@item.ImageUrl">
-                        </a>
-                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
-                            <img alt="@item.Name" src="@item.ImageUrl2">
-                        </a>
-                    </div>
-                </td>
-                <td class="budget">
-                    @item.ProjectUrl
-                </td>
-                <td>
-                    <a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a>
-                </td>
-                <td>
-                    <a href="/Portfolio/EditPortfolio/@item.PortfolioID" class="btn btn-primary">Düzenle</a>
-                </td>
-                <td></td>
-            </tr>
-            }
-    </table>
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Proje Adı </th>
+                                <th> Görseller</th>
+                                <th> Proje Url</th>
+                                <th class="text-center"> Sil </th>
+                                <th class="text-center"> Düzenle </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <th scope="row">
+                                    @item.PortfolioID
+                                </th>
+                                <th class="budget">
+                                    @item.Name
+                                </th>
+                                <td>
+                                    <div class="avatar-group">
+                                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
+                                            <img alt="@item.Name" src="@item.ImageUrl">
+                                        </a>
+                                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
+                                            <img alt="@item.Name" src="@item.ImageUrl2">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="budget">
+                                    @item.ProjectUrl
+                                </td>
+                                <td class="text-center">
+                                    <a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="/Portfolio/EditPortfolio/@item.PortfolioID" class="btn btn-outline-primary">Düzenle</a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<br />
-<a href="/Portfolio/AddPortfolio" class="btn btn-info">Proje Ekle</a>
+
+
+
+
+
+

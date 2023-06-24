@@ -1,43 +1,50 @@
 ﻿@model EntityLayer.Concrete.Experience
 @{
     ViewData["Title"] = "EditExperience";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Deneyim Düzenleme Sayfası</h3>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            @using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
+            {
+                <br />
+
+                @Html.HiddenFor(x => x.ExperienceID)
+
+                @Html.Label("Deneyim Adı")
+                @Html.TextBoxFor(x => x.ExperienceName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ExperienceName, null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("Tarih")
+                @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Date, null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("Resim")
+                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("Açıklama")
+                @Html.TextAreaFor(x => x.Description, 10, 3, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("Şirket Adı")
+                @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.CompanyName, null, new { @class = "text-danger" })
+                <br />
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-outline-primary px-4 py-2">Güncelle</button>
+                </div>
+            }
+        </div>
+    </div>
 </div>
 
-@using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
-{
-    <br />
 
-    @Html.HiddenFor(x => x.ExperienceID)
 
-    @Html.Label("Deneyim Adı")
-    @Html.TextBoxFor(x => x.ExperienceName, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.ExperienceName, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.Label("Tarih")
-    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Date, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.Label("Resim")
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.Label("Açıklama")
-    @Html.TextAreaFor(x => x.Description, 10, 3, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
-    <br />
-
-    @Html.Label("Şirket Adı")
-    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.CompanyName, null, new { @class = "text-danger" })
-    <br />
-
-    <button type="submit" class="btn btn-info">Güncelle</button>
-}

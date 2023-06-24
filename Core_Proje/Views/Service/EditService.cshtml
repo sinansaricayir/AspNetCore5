@@ -1,27 +1,36 @@
 ﻿@model EntityLayer.Concrete.Service
 @{
     ViewData["Title"] = "EditService";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Hizmet Ekleme Sayfası</h3>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            @using (Html.BeginForm("EditService", "Service", FormMethod.Post))
+            {
+                <br />
+                @Html.HiddenFor(x => x.ServiceID)
+                @Html.Label("Hizmet Adı")
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+                <br />
+
+                @Html.Label("Görsel")
+                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+                <br />
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-outline-primary px-4 py-2">Güncelle</button>
+                </div>
+            }
+
+        </div>
+    </div>
 </div>
 
-@using (Html.BeginForm("EditService", "Service", FormMethod.Post))
-{
-    <br />
-    @Html.HiddenFor(x => x.ServiceID)
-    @Html.Label("Hizmet Adı")
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
 
-    <br />
 
-    @Html.Label("Görsel")
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
 
-    <br />
-
-    <button type="submit" class="btn btn-info">Güncelle</button>
-}
 

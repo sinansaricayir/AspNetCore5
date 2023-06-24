@@ -1,28 +1,36 @@
 ﻿@model EntityLayer.Concrete.Skill
 @{
     ViewData["Title"] = "AddSkill";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Yetenek Ekleme Sayfası</h3>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            @using (Html.BeginForm("AddSkill", "Skill", FormMethod.Post))
+            {
+                <br />
+                @Html.Label("Yetenek Adı")
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
+
+                <br />
+
+                @Html.Label("Yetenek Oranı")
+                @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Value, null, new { @class = "text-danger" })
+
+                <br />
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-success px-4 py-2">Ekle</button>
+                </div>
+            }
+
+
+        </div>
+    </div>
 </div>
 
-@using (Html.BeginForm("AddSkill", "Skill", FormMethod.Post))
-{
-    <br />
-    @Html.Label("Yetenek Adı")
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
 
-    <br />
-
-    @Html.Label("Yetenek Oranı")
-    @Html.TextBoxFor(x => x.Value, new { @class = "form-control" }) 
-    @Html.ValidationMessageFor(x => x.Value, null, new { @class = "text-danger" })
-
-    <br />
-
-    <button type="submit" class="btn btn-info">Ekle</button>
-}
 
