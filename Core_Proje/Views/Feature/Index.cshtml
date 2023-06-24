@@ -17,14 +17,17 @@
 
                 @Html.Label("Başlık")
                 @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Header, null, new { @class = "text-danger" })
                 <br />
 
                 @Html.Label("Ad Soyad")
                 @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
                 <br />
 
                 @Html.Label("Görev")
                 @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
                 <br />
 
                 <div class="d-flex justify-content-end">

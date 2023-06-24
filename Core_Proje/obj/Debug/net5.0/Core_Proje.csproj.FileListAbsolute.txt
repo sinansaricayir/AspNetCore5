@@ -587,3 +587,7 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\FeatureStatistics\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\LastProjects\Default.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialNewSidebar.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardStatistics\Default.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\MessageLists\Default.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\SocialMediaList\Default.cshtml.g.cs

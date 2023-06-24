@@ -13,12 +13,12 @@
                 @Html.HiddenFor(x => x.ServiceID)
                 @Html.Label("Hizmet Adı")
                 @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-
+                @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
                 <br />
 
                 @Html.Label("Görsel")
                 @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-
+                @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
                 <br />
 
                 <div class="d-flex justify-content-end">

@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -39,9 +41,23 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Hizmetler";
             ViewBag.v3 = "Hizmetler Listesi";
 
-            serviceManager.TAdd(service);
+            ServiceValidator validations = new ServiceValidator();
+            ValidationResult results = validations.Validate(service);
 
-            return RedirectToAction("Index");
+            if (results.IsValid)
+            {
+                serviceManager.TAdd(service);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
 
         public IActionResult DeleteService(int id)
@@ -71,9 +87,23 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Hizmetler";
             ViewBag.v3 = "Hizmetler Listesi";
 
-            serviceManager.TUpdate(service);
+            ServiceValidator validations = new ServiceValidator();
+            ValidationResult results = validations.Validate(service);
 
-            return RedirectToAction("Index");
+            if (results.IsValid)
+            {
+                serviceManager.TUpdate(service);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
     }
 }
