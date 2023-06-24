@@ -20,7 +20,8 @@
                             <tr>
                                 <th> # </th>
                                 <th> Proje Adı </th>
-                                <th> Görseller</th>
+                                <th> Tarih</th>
+                                <th> Tamamlanma Oranı</th>
                                 <th> Proje Url</th>
                                 <th class="text-center"> Sil </th>
                                 <th class="text-center"> Düzenle </th>
@@ -37,13 +38,11 @@
                                     @item.Name
                                 </th>
                                 <td>
-                                    <div class="avatar-group">
-                                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
-                                            <img alt="@item.Name" src="@item.ImageUrl">
-                                        </a>
-                                        <a href="#" class="avatar avatar-md " data-toggle="tooltip" data-original-title="@item.Name">
-                                            <img alt="@item.Name" src="@item.ImageUrl2">
-                                        </a>
+                                    @item.Date
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: @item.StatusValue%" aria-valuenow="@item.StatusValue" aria-valuemin="0" aria-valuemax="100">%@item.StatusValue</div>
                                     </div>
                                 </td>
                                 <td class="budget">

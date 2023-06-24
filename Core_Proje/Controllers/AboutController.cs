@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -32,8 +34,23 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Hakkımızda";
             ViewBag.v3 = "Hakkımızda Listesi";
 
-            aboutManager.TUpdate(about);
-            return RedirectToAction("Index", "Default");
+            AboutValidator validations = new AboutValidator();
+            ValidationResult results = validations.Validate(about);
+
+            if (results.IsValid)
+            {
+                aboutManager.TUpdate(about);
+                return RedirectToAction("Index", "Default");
+            }
+            else
+            {
+                foreach(var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
     }
 }

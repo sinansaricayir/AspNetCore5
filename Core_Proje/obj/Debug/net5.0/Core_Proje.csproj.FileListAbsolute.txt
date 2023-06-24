@@ -584,3 +584,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Service\EditService.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\_NewAdminLAyout.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Test\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\FeatureStatistics\Default.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\LastProjects\Default.cshtml.g.cs
