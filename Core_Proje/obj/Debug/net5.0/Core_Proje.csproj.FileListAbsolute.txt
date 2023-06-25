@@ -591,3 +591,4 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardStatistics\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\MessageLists\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\SocialMediaList\Default.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\SlideList\Default.cshtml.g.cs

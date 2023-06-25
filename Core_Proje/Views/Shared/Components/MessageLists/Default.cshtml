@@ -1,5 +1,5 @@
 ﻿@using EntityLayer.Concrete
-@model List<Message>
+@model List<UserMessage>
 
 
 
@@ -24,11 +24,11 @@
                             {
                                 <tr>
                                     <td>
-                                        <img src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/images/faces/face1.jpg" alt="image" />
-                                        <span class="pl-2">@item.Name</span>
+                                        <img src="@item.User.ImageUrl" alt="image" />
+                                        <span class="pl-2">@item.User.Name</span>
                                     </td>
-                                    <td> @item.Content </td>
-                                    <td> @item.Mail </td>
+                                    <td> @item.Content.Substring(0,30) ... </td>
+                                    <td> @item.User.Mail </td>
                                     <td> @item.Date </td>
                                     <td>
                                         @if (item.Status == true)
