@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@await Html.PartialAsync("_HeadPartial")
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        @await Html.PartialAsync("_NavbarPartial")
+        <div class="container-fluid page-body-wrapper">
+
+
+            @await Html.PartialAsync("_SidebarPartial")
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                @await Html.PartialAsync("_FooterPartial")
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("_ScriptsPartial")
+</body>
+
+</html>
+
