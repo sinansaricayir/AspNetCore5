@@ -8,17 +8,27 @@ namespace Core_Proje.Areas.Writer.Models
 {
     public class UserRegisterViewModel
     {
+        [Required(ErrorMessage = "Lütfen Adınızı Giriniz!")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Soyadınızı Giriniz!")]
+        public string Surname { get; set; }
+
         [Required(ErrorMessage = "Lütfen Kullanıcı Adı Giriniz!")]
         public string UserName { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Mail Adresinizi Giriniz!")]
+        public string Mail { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Resim Alanını Doldurunuz!")]
+        public string ImageUrl { get; set; }
 
         [Required(ErrorMessage = "Lütfen Şifre Giriniz!")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Lütfen Şifreyi Tekrar Giriniz!")]
-        [Compare("Password",ErrorMessage ="Şifreler Uyumlu Değil!")]
+        [Compare("Password", ErrorMessage = "Şifreler Uyumlu Değil!")]
         public string ConfirmPassword { get; set; }
 
-        [Required(ErrorMessage = "Lütfen Mail Adresi Giriniz!")]
-        public string Mail { get; set; }
     }
 }

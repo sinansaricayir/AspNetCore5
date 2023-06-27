@@ -607,3 +607,4 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.A
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\_ViewImports.cshtml.g.cs
