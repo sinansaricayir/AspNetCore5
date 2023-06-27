@@ -47,7 +47,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\EntityLaye
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.json
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.dev.json
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
-C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -58,3 +57,4 @@ C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\obj\Debug\net5.0\EntityLaye
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
 C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\obj\Debug\net5.0\EntityLayer.genruntimeconfig.cache
+C:\Users\SSA\source\repos\asp.net-core-5\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll

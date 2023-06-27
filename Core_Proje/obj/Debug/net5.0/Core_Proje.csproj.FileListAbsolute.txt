@@ -400,7 +400,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.runtimeconfig.json
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.runtimeconfig.dev.json
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.dll
-C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\ref\Core_Proje.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.pdb
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.Views.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Core_Proje.Views.pdb
@@ -525,7 +524,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.RazorAssemblyInfo.cache
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.RazorAssemblyInfo.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\staticwebassets\Core_Proje.StaticWebAssets.Manifest.cache
-C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\staticwebassets\Core_Proje.StaticWebAssets.xml
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\scopedcss\bundle\Core_Proje.styles.css
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.TagHelpers.input.cache
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Core_Proje.TagHelpers.output.cache
@@ -608,3 +606,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.A
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\_ViewImports.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Login\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\ref\Core_Proje.dll
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\staticwebassets\Core_Proje.StaticWebAssets.xml

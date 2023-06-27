@@ -42,17 +42,20 @@ namespace Core_Proje.Areas.Writer.Controllers
                     ImageUrl = p.ImageUrl
                 };
 
-                var result = await _userManager.CreateAsync(w, p.Password);
+                if (p.Password == p.ConfirmPassword)
+                {
+                    var result = await _userManager.CreateAsync(w, p.Password);
 
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Index", "Login");
-                }
-                else
-                {
-                    foreach (var item in result.Errors)
+                    if (result.Succeeded)
                     {
-                        ModelState.AddModelError("", item.Description);
+                        return RedirectToAction("Index", "Login");
+                    }
+                    else
+                    {
+                        foreach (var item in result.Errors)
+                        {
+                            ModelState.AddModelError("", item.Description);
+                        }
                     }
                 }
 

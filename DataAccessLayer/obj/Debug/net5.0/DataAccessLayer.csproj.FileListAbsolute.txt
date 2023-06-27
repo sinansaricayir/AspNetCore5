@@ -56,7 +56,6 @@ C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\DataAc
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.json
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.dev.json
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
@@ -70,3 +69,4 @@ C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\obj\Debug\net5.0\DataAc
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\SSA\source\repos\asp.net-core-5\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
