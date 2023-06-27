@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core_Proje.Controllers
+namespace Core_Proje.Areas.Writer.Controllers
 {
-    public class TestController : Controller
+    [Area("Writer")]
+    public class ProfileController : Controller
     {
         public IActionResult Index()
         {

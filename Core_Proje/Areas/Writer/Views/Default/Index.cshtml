@@ -20,7 +20,6 @@
                             <tr>
                                 <th>#</th>
                                 <th>Başlık</th>
-                                <th>İçerik</th>
                                 <th>Tarih</th>
                                 <th>Durum</th>
                                 <th>Detaylar</th>
@@ -49,10 +48,9 @@
                                 <tr>
                                     <th>@row</th>
                                     <td>@item.Title</td>
-                                    <td>@item.Content</td>
                                     <td>@(((DateTime)item.Date).ToString("dd-MMM-yyy"))</td>
                                     <td><label class="@color">@item.Status</label></td>
-                                    <td><a href="#" class="btn btn-outline-primary btn-sm">Detay</a></td>
+                                    <td><a href="/Writer/Default/AnnouncementDetail/@item.AnnouncementID" class="btn btn-outline-primary btn-sm">Detay</a></td>
                                 </tr>
 
                                 row++;

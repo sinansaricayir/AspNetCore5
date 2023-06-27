@@ -20,5 +20,11 @@ namespace Core_Proje.Areas.Writer.Controllers
             var announcements = announcementManager.TGetList();
             return View(announcements);
         }
+
+        public IActionResult AnnouncementDetail(int id)
+        {
+            var announcement = announcementManager.TGetById(id);
+            return View(announcement);
+        }
     }
 }
