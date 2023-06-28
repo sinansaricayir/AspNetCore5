@@ -1,4 +1,4 @@
-﻿
+﻿@model Core_Proje.Areas.Writer.Models.UserEditViewModel
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
@@ -10,14 +10,14 @@
         <div class="card-body">
             <h4 class="card-title">Profil Bilgilerini Düzenle</h4>
 
-            <form class="forms-sample">
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputName1">Adınız</label>
-                    <input type="text" class="form-control" id="exampleInputName1" placeholder="ad">
+                    <input type="text" class="form-control" asp-for="Name" placeholder="ad">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Soyadınız</label>
-                    <input type="text" class="form-control" id="exampleInputName1" placeholder="soyad">
+                    <input type="text" class="form-control" asp-for="Surname" placeholder="soyad">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail3">Şifreniz</label>
@@ -30,13 +30,20 @@
 
                 <div class="form-group">
                     <label>Resim Seç</label>
-                    <input type="file" name="img[]" class="file-upload-default">
+                    <input type="file" asp-for="Picture" class="file-upload-default">
                     <div class="input-group col-xs-12">
                         <input type="text" class="form-control file-upload-info" disabled placeholder="resim seçiniz">
                         <span class="input-group-append">
                             <button class="file-upload-browse btn btn-primary" type="button">Yükle</button>
                         </span>
                     </div>
+                    @{
+                        if (Model.PictureURL != "")
+                        {
+                            <img src="~/userImage/@Model.PictureURL" alt="Alternate Text" style="width:100px; height:100px; object-fit:cover;margin-top:20px;" />
+
+                        }
+                    }
                 </div>
 
                 <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
