@@ -610,3 +610,4 @@ C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\bin\Debug\net5.0\ref\Core_Pr
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\staticwebassets\Core_Proje.StaticWebAssets.xml
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Default\AnnouncementDetail.cshtml.g.cs
 C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Profile\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\asp.net-core-5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Dashboard\Index.cshtml.g.cs
