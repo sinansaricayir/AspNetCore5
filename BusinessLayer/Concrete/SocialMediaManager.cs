@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,6 +30,8 @@ namespace BusinessLayer.Concrete
             _socialMedia.Delete(t);
         }
 
+        
+
         public SocialMedia TGetById(int id)
         {
             return _socialMedia.GetByID(id);
@@ -37,6 +40,11 @@ namespace BusinessLayer.Concrete
         public List<SocialMedia> TGetList()
         {
             return _socialMedia.GetList();
+        }
+
+        public List<SocialMedia> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(SocialMedia t)

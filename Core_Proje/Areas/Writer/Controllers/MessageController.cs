@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +13,26 @@ namespace Core_Proje.Areas.Writer.Controllers
     [Area("Writer")]
     public class MessageController : Controller
     {
-        public IActionResult Index()
+        UserManager<WriterUser> _userManager;
+
+        WriterMessageManager writerMessageManager = new WriterMessageManager(new EfWriterMessageDal());
+
+        public MessageController(UserManager<WriterUser> userManager)
         {
-            return View();
+            _userManager = userManager;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var messages = writerMessageManager.TGetListByFilter(user.Email);
+            return View(messages);
+        }
+
+        public IActionResult WriterMessageDetail(int id)
+        {
+            var message = writerMessageManager.TGetById(id);
+            return View(message);
         }
     }
 }

@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +34,8 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+       
+
         public UserMessage TGetById(int id)
         {
             throw new NotImplementedException();
@@ -41,6 +44,11 @@ namespace BusinessLayer.Concrete
         public List<UserMessage> TGetList()
         {
             return _userMessageDal.GetList();
+        }
+
+        public List<UserMessage> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(UserMessage t)

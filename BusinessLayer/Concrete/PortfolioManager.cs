@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,8 @@ namespace BusinessLayer.Concrete
             _portfolioDal.Delete(t);
         }
 
+       
+
         public Portfolio TGetById(int id)
         {
             return _portfolioDal.GetByID(id);
@@ -37,6 +40,11 @@ namespace BusinessLayer.Concrete
         {
             return _portfolioDal.GetList();
             
+        }
+
+        public List<Portfolio> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(Portfolio t)

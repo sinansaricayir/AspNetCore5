@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,7 @@ namespace BusinessLayer.Concrete
             _aboutDal.Delete(t);
         }
 
+
         public About TGetById(int id)
         {
             return _aboutDal.GetByID(id);
@@ -36,6 +38,11 @@ namespace BusinessLayer.Concrete
         public List<About> TGetList()
         {
             return _aboutDal.GetList();
+        }
+
+        public List<About> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(About t)

@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,8 @@ namespace BusinessLayer.Concrete
             _toDoDal.Delete(t);
         }
 
+      
+
         public ToDo TGetById(int id)
         {
             return _toDoDal.GetByID(id);
@@ -36,6 +39,11 @@ namespace BusinessLayer.Concrete
         public List<ToDo> TGetList()
         {
             return _toDoDal.GetList();
+        }
+
+        public List<ToDo> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(ToDo t)
