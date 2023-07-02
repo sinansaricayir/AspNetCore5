@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MBilHnoblggUrdCSvRbNmGWJUBt8jxx8uNQ1/ECxUNIBnlkQmCzZUiupCOJSjHZcwxDrjk9TibUHZ9fCw9Iy8A==",
+  "dgSpecHash": "oxhfCUYlajrctm6BoB3VA2mql4BAGpl1s8/hBzs3abVrJtnhx8oTNkraX67tSDvMone/YDpkUzpte/YnyIRWjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\Core_Proje\\Core_Proje.csproj",
+  "projectFilePath": "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\Core_Proje\\Core_Proje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSA\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\SSA\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

@@ -6760,11 +6760,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\SSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SSA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6781,11 +6781,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\SSA\\source\\repos\\asp.net-core-5\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\SSA\\source\\repos\\AspNetCore5\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }

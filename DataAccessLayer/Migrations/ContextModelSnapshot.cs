@@ -388,7 +388,13 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Reciever")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("RecieverName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Sender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Subject")

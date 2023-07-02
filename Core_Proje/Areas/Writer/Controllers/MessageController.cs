@@ -22,10 +22,17 @@ namespace Core_Proje.Areas.Writer.Controllers
             _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> ReceiverMessage()
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            var messages = writerMessageManager.TGetListByFilter(user.Email);
+            var messages = writerMessageManager.GetListReceiverMessage(user.Email);
+            return View(messages);
+        }
+
+        public async Task<IActionResult> SenderMessage()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var messages = writerMessageManager.GetListSenderMessage(user.Email);
             return View(messages);
         }
 
@@ -34,5 +41,6 @@ namespace Core_Proje.Areas.Writer.Controllers
             var message = writerMessageManager.TGetById(id);
             return View(message);
         }
+
     }
 }
