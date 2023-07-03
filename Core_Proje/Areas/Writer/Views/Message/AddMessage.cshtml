@@ -1,6 +1,8 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "AddMessage";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
+    var emails = ViewBag.emails;
 }
 
 <h2>Yeni Mesaj Gönder</h2>
@@ -8,7 +10,12 @@
 <form action="/Writer/Message/AddMessage" method="post" class="form-group">
 
     <label>Alıcı</label>
-    <input type="text" name="Reciever" class="form-control" />
+    <select class="form-control" name="Reciever">
+        @foreach (var item in emails)
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
     <br />
 
     <label>Başlık</label>

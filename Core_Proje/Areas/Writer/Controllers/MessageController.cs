@@ -2,6 +2,7 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,8 @@ using System.Threading.Tasks;
 namespace Core_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
+    [Authorize]
+    [Route("Writer/[controller]/[action]/{id?}")]
     public class MessageController : Controller
     {
         UserManager<WriterUser> _userManager;
@@ -46,6 +49,18 @@ namespace Core_Proje.Areas.Writer.Controllers
         [HttpGet]
         public IActionResult AddMessage()
         {
+            using var c = new Context();
+
+            //uzun yol
+            //var emails = new List<string>();
+            //foreach(var item in c.Users)
+            //{
+            //    var mail = item.Email;
+            //    emails.Add(mail);
+            //}
+
+            var emails = c.Users.Select(x => x.Email).ToList();
+            ViewBag.emails = emails;
             return View();
         }
 
@@ -60,8 +75,7 @@ namespace Core_Proje.Areas.Writer.Controllers
             p.RecieverName = c.Users.Where(x => x.Email == p.Reciever).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
             writerMessageManager.TAdd(p);
 
-            return RedirectToAction("SenderMessage", "Message");
+            return RedirectToAction("SenderMessage");
         }
-
     }
 }
