@@ -9,7 +9,7 @@
 
 <div class="form-group">
     @Html.HiddenFor(x => x.WriterMessageID)
-    @Html.TextAreaFor(x => x.MessageContent, 10, 3, new { @class = "form-control" })
+    <p class="form-control">@Model.Subject</p>
 </div>
 
 

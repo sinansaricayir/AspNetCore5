@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
@@ -38,8 +39,28 @@ namespace Core_Proje.Areas.Writer.Controllers
 
         public IActionResult WriterMessageDetail(int id)
         {
-            var message = writerMessageManager.TGetById(id);
-            return View(message);
+            WriterMessage writerMessage = writerMessageManager.TGetById(id);
+            return View(writerMessage);
+        }
+
+        [HttpGet]
+        public IActionResult AddMessage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddMessage(WriterMessage p)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            p.SenderName = user.Name + " " + user.Surname;
+            p.Sender = user.Email;
+            p.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            using var c = new Context();
+            p.RecieverName = c.Users.Where(x => x.Email == p.Reciever).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
+            writerMessageManager.TAdd(p);
+
+            return RedirectToAction("SenderMessage", "Message");
         }
 
     }

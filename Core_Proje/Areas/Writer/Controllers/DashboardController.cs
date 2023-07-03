@@ -27,10 +27,10 @@ namespace Core_Proje.Areas.Writer.Controllers
 
             //statistics
             using var c = new Context();
-            ViewBag.v1 = 0;
+            ViewBag.v1 = c.WriterMessages.Where(x=>x.Reciever == userInformations.Email).Count();
             ViewBag.v2 = c.Announcements.Count();
-            ViewBag.v3 = 2;
-            ViewBag.v4 = c.Skills.Count();
+            ViewBag.v3 = c.Users.Count();
+            ViewBag.v4 = c.WriterMessages.Where(x => x.Sender == userInformations.Email).Count();
 
             //weather api key
             string apiKey = "cfe678ae68a34c2c54a4da1485841460";
