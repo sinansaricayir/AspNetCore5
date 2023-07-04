@@ -839,3 +839,6 @@ C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Core_Proje.gen
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Message\ReceiverMessage.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Message\SenderMessage.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Message\AddMessage.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Testimonial\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Testimonial\AddTestimonial.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Testimonial\EditTestimonial.cshtml.g.cs

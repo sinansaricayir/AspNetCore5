@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Testimonial
+
+@{
+    ViewData["Title"] = "AddTestimonial";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            @using (Html.BeginForm("AddTestimonial", "Testimonial", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                <br />
+
+                @Html.Label("Ad Soyad")
+                @Html.TextBoxFor(x => x.ClientName, new { @class = "form-control" })
+
+                <br />
+
+                @Html.Label("Görevi")
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+                <br />
+
+
+                @Html.Label("Şirket Adı")
+                @Html.TextBoxFor(x => x.Company, new { @class = "form-control" })
+
+                <br />
+
+
+                @Html.Label("Yorum")
+                @Html.TextAreaFor(x => x.Comment, 10, 3, new { @class = "form-control" })
+
+                <br />
+
+                @Html.Label("Resim 1")
+                <input type="file" name="Picture" accept="image/*" class="form-control" />
+                <br />
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-success px-4 py-2">Ekle</button>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
