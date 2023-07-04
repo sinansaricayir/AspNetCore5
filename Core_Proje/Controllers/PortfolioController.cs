@@ -3,9 +3,11 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -36,11 +38,31 @@ namespace Core_Proje.Controllers
 
 
         [HttpPost]
-        public IActionResult AddPortfolio(Portfolio portfolio)
+        public async Task<IActionResult> AddPortfolio(Portfolio portfolio, IFormFile Picture1, IFormFile Picture2)
         {
             ViewBag.v1 = "Proje Ekle";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Ekle";
+
+            List<IFormFile> Picture = new List<IFormFile>();
+            Picture.Add(Picture1);
+            Picture.Add(Picture2);
+
+            List<string> imagePaths = new List<string>();
+
+            foreach (var item in Picture)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(item.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/projectImage/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await item.CopyToAsync(stream);
+                imagePaths.Add(imageName);
+            }
+            portfolio.ImageUrl = imagePaths[0];
+            portfolio.ImageUrl2 = imagePaths[1];
+
 
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult results = validations.Validate(portfolio);
@@ -80,11 +102,33 @@ namespace Core_Proje.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditPortfolio(Portfolio portfolio)
+        public async Task<IActionResult> EditPortfolio(Portfolio portfolio, IFormFile Picture1, IFormFile Picture2)
         {
             ViewBag.v1 = "Proje Düzenle";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Düzenle";
+
+            if (Picture1 != null && Picture2 != null)
+            {
+                List<IFormFile> Picture = new List<IFormFile>();
+                Picture.Add(Picture1);
+                Picture.Add(Picture2);
+
+                List<string> imagePaths = new List<string>();
+
+                foreach (var item in Picture)
+                {
+                    var resource = Directory.GetCurrentDirectory();
+                    var extension = Path.GetExtension(item.FileName);
+                    var imageName = Guid.NewGuid() + extension;
+                    var saveLocation = resource + "/wwwroot/projectImage/" + imageName;
+                    var stream = new FileStream(saveLocation, FileMode.Create);
+                    await item.CopyToAsync(stream);
+                    imagePaths.Add(imageName);
+                }
+                portfolio.ImageUrl = imagePaths[0];
+                portfolio.ImageUrl2 = imagePaths[1];
+            }
 
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult results = validations.Validate(portfolio);

@@ -3,9 +3,11 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,17 +24,28 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Hakkımızda";
             ViewBag.v3 = "Hakkımızda Listesi";
 
-            var about = aboutManager.TGetById(1);
+            var about = aboutManager.TGetList().FirstOrDefault();
 
             return View(about);
         }
 
         [HttpPost]
-        public IActionResult Index(About about)
+        public async Task<IActionResult> Index(About about, IFormFile Picture)
         {
             ViewBag.v1 = "Hakkımızda Listesi";
             ViewBag.v2 = "Hakkımızda";
             ViewBag.v3 = "Hakkımızda Listesi";
+
+            if (Picture != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(Picture.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/aboutImage/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await Picture.CopyToAsync(stream);
+                about.ImageUrl = imageName;
+            }
 
             AboutValidator validations = new AboutValidator();
             ValidationResult results = validations.Validate(about);

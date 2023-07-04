@@ -7,7 +7,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            @using (Html.BeginForm("EditPortfolio", "Portfolio", FormMethod.Post))
+            @using (Html.BeginForm("EditPortfolio", "Portfolio", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <br />
 
@@ -33,14 +33,15 @@
                 <br />
 
                 @Html.Label("Resim 1")
-                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
+                <img src="/projectImage/@Model.ImageUrl" width="150" height="150" class="ml-4 mb-4" />
+                <input type="file" name="Picture1" accept="image/*" class="form-control" />
                 <br />
 
                 @Html.Label("Resim 2")
-                @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.ImageUrl2, null, new { @class = "text-danger" })
+                <img src="/projectImage/@Model.ImageUrl2" width="150" height="150" class="ml-4 mb-4" />
+                <input type="file" name="Picture2" accept="image/*" class="form-control" />
                 <br />
+
 
                 @Html.Label("Proje Url")
                 @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })

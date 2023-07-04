@@ -7,7 +7,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            @using (Html.BeginForm("Index", "About", FormMethod.Post))
+            @using (Html.BeginForm("Index", "About", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
 
                 <br />
@@ -50,12 +50,12 @@
                 <br />
 
                 @Html.Label("Resim Url")
-                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
-
+                <img src="/aboutImage/@Model.ImageUrl" width="150" height="150" class="ml-4 mb-4" />
                 <br />
 
-                <div class="d-flex justify-content-end">
+                <input type="file" name="Picture" accept="image/*" class="form-control" />
+
+                <div class="d-flex justify-content-end mt-4">
                     <button type="submit" class="btn btn-outline-primary px-4 py-2">Güncelle</button>
                 </div>
 

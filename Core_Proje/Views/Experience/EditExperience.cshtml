@@ -7,7 +7,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            @using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
+            @using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <br />
 
@@ -23,9 +23,9 @@
                 @Html.ValidationMessageFor(x => x.Date, null, new { @class = "text-danger" })
                 <br />
 
-                @Html.Label("Resim")
-                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
+                @Html.Label("Resim Url")
+                <img src="/experienceImage/@Model.ImageUrl" width="150" height="150" class="ml-4 mb-4" />
+                <input type="file" name="Picture" accept="image/*" class="form-control" />
                 <br />
 
                 @Html.Label("Açıklama")

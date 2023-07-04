@@ -21,7 +21,6 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.Age).NotEmpty().WithMessage("Yaş alanı boş bırakılamaz!");
             RuleFor(x => x.Mail).NotEmpty().WithMessage("Mail alanı boş bırakılamaz!");
             RuleFor(x => x.Phone).NotEmpty().WithMessage("Telefon alanı boş bırakılamaz!");
-            RuleFor(x => x.ImageUrl).NotEmpty().WithMessage("Resim alanı boş bırakılamaz!");
             RuleFor(x => x.Address).NotEmpty().WithMessage("Adres alanı boş bırakılamaz!");
             RuleFor(x => x.Address).MaximumLength(100).WithMessage("Adres alanı 100 karakterden fazla olamaz!");
         }
