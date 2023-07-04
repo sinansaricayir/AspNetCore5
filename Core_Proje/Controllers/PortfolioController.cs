@@ -129,6 +129,12 @@ namespace Core_Proje.Controllers
                 portfolio.ImageUrl = imagePaths[0];
                 portfolio.ImageUrl2 = imagePaths[1];
             }
+            else
+            {
+                var oldFile = portfolioManager.TGetById(portfolio.PortfolioID);
+                portfolio.ImageUrl = oldFile.ImageUrl;
+                portfolio.ImageUrl2 = oldFile.ImageUrl2;
+            }
 
             PortfolioValidator validations = new PortfolioValidator();
             ValidationResult results = validations.Validate(portfolio);

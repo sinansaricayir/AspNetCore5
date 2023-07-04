@@ -13,7 +13,6 @@ namespace BusinessLayer.ValidationRules
         public ServiceValidator()
         {
             RuleFor(x => x.Title).NotEmpty().WithMessage("Hizmet adı alanı boş geçilemez!");
-            RuleFor(x => x.ImageUrl).NotEmpty().WithMessage("Görsel alanı boş geçilemez!");
         }
     }
 }

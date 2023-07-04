@@ -36,7 +36,7 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Hakkımızda";
             ViewBag.v3 = "Hakkımızda Listesi";
 
-            if (Picture != null)
+            if (Picture != null && Picture.Length > 0)
             {
                 var resource = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(Picture.FileName);
@@ -46,6 +46,11 @@ namespace Core_Proje.Controllers
                 await Picture.CopyToAsync(stream);
                 about.ImageUrl = imageName;
             }
+            else
+            {
+                var oldFile = aboutManager.TGetById(about.AboutID);
+                about.ImageUrl = oldFile.ImageUrl;
+            }
 
             AboutValidator validations = new AboutValidator();
             ValidationResult results = validations.Validate(about);
@@ -53,7 +58,7 @@ namespace Core_Proje.Controllers
             if (results.IsValid)
             {
                 aboutManager.TUpdate(about);
-                return RedirectToAction("Index", "Default");
+                return RedirectToAction("Index");
             }
             else
             {

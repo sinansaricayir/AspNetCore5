@@ -7,7 +7,7 @@
             <h2 class="marker marker-center">Client Testimonials</h2>
         </div>
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var item in Model.Take(3))
             {
                 <div class="col-md-12 mb-5" data-aos="fade-right" data-aos-delay="100">
                     <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2">@item.Comment</span></div>
@@ -15,7 +15,7 @@
                         <div class="text-end me-2">
                             <div class="fw-bolder">@item.ClientName</div>
                             <div class="text-small">@item.Company / @item.Title</div>
-                        </div><img class="me-md-3 rounded" src="@item.ImageUrl" width="96" height="96" alt="client 1" />
+                        </div><img class="me-md-3 rounded" src="/testimonialImage/@item.ImageUrl" width="96" height="96" alt="client 1" />
                     </div>
                 </div>
             }

@@ -74,7 +74,7 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Referanslar";
             ViewBag.v3 = "Referanslar Düzenle";
 
-            if (Picture != null)
+            if (Picture != null && Picture.Length > 0)
             {
                 var resource = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(Picture.FileName);
@@ -83,6 +83,11 @@ namespace Core_Proje.Controllers
                 var stream = new FileStream(saveLocation, FileMode.Create);
                 await Picture.CopyToAsync(stream);
                 testimonial.ImageUrl = imageName;
+            }
+            else
+            {
+                var oldFile = testimonialManager.TGetById(testimonial.TestimonialID);
+                testimonial.ImageUrl = oldFile.ImageUrl;
             }
 
             testimonialManager.TUpdate(testimonial);

@@ -9,7 +9,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            @using (Html.BeginForm("AddService", "Service", FormMethod.Post))
+            @using (Html.BeginForm("AddService", "Service", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <br />
                 @Html.Label("Hizmet Adı")
@@ -18,9 +18,8 @@
 
                 <br />
 
-                @Html.Label("Görsel")
-                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.ImageUrl, null, new { @class = "text-danger" })
+                @Html.Label("Resim")
+                <input type="file" name="Picture" accept="image/*" class="form-control" />
                 <br />
 
                 <div class="d-flex justify-content-end">

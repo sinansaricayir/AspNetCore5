@@ -100,7 +100,7 @@ namespace Core_Proje.Controllers
             ViewBag.v2 = "Deneyimler";
             ViewBag.v3 = "Deneyimler Düzenle";
 
-            if (Picture != null)
+            if (Picture != null && Picture.Length > 0)
             {
                 var resource = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(Picture.FileName);
@@ -109,6 +109,11 @@ namespace Core_Proje.Controllers
                 var stream = new FileStream(saveLocation, FileMode.Create);
                 await Picture.CopyToAsync(stream);
                 experience.ImageUrl = imageName;
+            }
+            else
+            {
+                var oldFile = experienceManager.TGetById(experience.ExperienceID);
+                experience.ImageUrl = oldFile.ImageUrl;
             }
 
             ExperienceValidator validation = new ExperienceValidator();

@@ -11,6 +11,8 @@
         <div class="card-body">
             @using (Html.BeginForm("EditTestimonial", "Testimonial", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
+                @Html.HiddenFor(x => x.TestimonialID)
+
 
                 <br />
 
