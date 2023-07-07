@@ -8,38 +8,22 @@ namespace Core_Proje.Controllers
 {
     public class AdminController : Controller
     {
-
-        public PartialViewResult PartialHead()
+        public PartialViewResult PartialNewHead()
         {
             return PartialView();
-        }
-
-        public PartialViewResult PartialSidebar()
-        {
-            return PartialView();
-        }
-
-        public PartialViewResult PartialNavbar()
-        {
-            return PartialView();
-        }
-
-        public PartialViewResult PartialFooter()
-        {
-            return PartialView();
-        }
-
-        public PartialViewResult PartialScript()
-        {
-            return PartialView();
-        }
-
-        public PartialViewResult PartialNavigation()
+        }  
+        
+        public PartialViewResult PartialNewNavbar()
         {
             return PartialView();
         }
 
         public PartialViewResult PartialNewSidebar()
+        {
+            return PartialView();
+        } 
+        
+        public PartialViewResult PartialNewScript()
         {
             return PartialView();
         }
