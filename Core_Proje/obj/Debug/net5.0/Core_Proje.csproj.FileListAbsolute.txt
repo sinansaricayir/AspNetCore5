@@ -780,13 +780,7 @@ C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Wr
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\Shared\Components\Notification\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Writer\Views\_ViewImports.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialFooter.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialHead.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialNavbar.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialNavigation.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialNewSidebar.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialScript.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialSidebar.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Default\HeadPartial.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Default\Index.cshtml.g.cs
@@ -821,7 +815,6 @@ C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Sh
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\ToDoList\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\VisitorMap\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\_NewAdminLAyout.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -842,3 +835,10 @@ C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Areas\Wr
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Testimonial\Index.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Testimonial\AddTestimonial.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Testimonial\EditTestimonial.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Contact\ShowMessage.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\AdminMessage\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\AdminMessage\ReceiverMessage.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\AdminMessage\MessageDetail.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\AdminMessage\SenderMessage.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\AdminMessage\AddMessage.cshtml.g.cs

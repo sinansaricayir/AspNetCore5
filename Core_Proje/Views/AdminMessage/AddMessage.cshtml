@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "AddMessage";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+}
+
+<form action="/AdminMessage/AddMessage" method="post" class="form-group">
+
+    <label>Alıcı Mail Adresi</label>
+    <input type="text" class="form-control" name="Reciever" />
+    <br />
+
+    <label>Başlık</label>
+    <input type="text" class="form-control" name="Subject" />
+    <br />
+
+    <label>Mesaj İçeriği</label>
+    <textarea class="form-control" name="MessageContent" rows="10" cols="10"></textarea>
+    <br />
+
+    <button type="submit" class="btn btn-primary">Gönder</button>
+
+</form>

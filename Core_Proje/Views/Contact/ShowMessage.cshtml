@@ -1,0 +1,14 @@
+﻿@model EntityLayer.Concrete.Message
+@{
+    ViewData["Title"] = "ShowMessage";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+}
+
+<div class="form-group">
+    <textarea class="form-control">@Model.Content</textarea>
+</div>
+
+<a asp-action="Index" class="text-decoration-none">Geri Git</a>
+
+
+

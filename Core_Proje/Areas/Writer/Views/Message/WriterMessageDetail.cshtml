@@ -8,8 +8,11 @@
 <h3 class="mb-4">Mesaj Detayı</h3>
 
 <div class="form-group">
-    @Html.HiddenFor(x => x.WriterMessageID)
+    <label class="font-weight-bold">Mesaj Konusu</label>
     <p class="form-control">@Model.Subject</p>
+    <br />
+    <label class="font-weight-bold">Mesaj İçeriği</label>
+    <textarea class="form-control">@Model.MessageContent</textarea>
 </div>
 
 

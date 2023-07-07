@@ -1,0 +1,61 @@
+﻿@using EntityLayer.Concrete
+@model List<WriterMessage>
+@{
+    ViewData["Title"] = "SenderMessage";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+    int row = 1;
+}
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th>Yazar Adı Soyadı</th>
+                                <th>Yazar Mail Adresi</th>
+                                <th>Konu Başlığı</th>
+                                <th>Tarih</th>
+                                <th class="text-center">Mesaj İçeriği</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">
+                                        @row
+                                    </th>
+                                    <th class="budget">
+                                        @item.RecieverName
+                                    </th>
+                                    <td>
+                                        @item.Reciever
+                                    </td>
+                                    <td>
+                                        @item.Subject
+                                    </td>
+                                    <td>
+                                        @item.Date.ToShortDateString()
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="/AdminMessage/MessageDetail/@item.WriterMessageID" class="btn btn-outline-primary">Detay</a>
+                                    </td>
+                                </tr>
+                                row++;
+                            }
+                        </tbody>
+                    </table>
+                    <a asp-action="Index" class="btn btn-outline-primary mt-4">Yazar Admin Paneli</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -20,7 +20,6 @@ namespace Core_Proje.Areas.Writer.Models
         [Required(ErrorMessage = "Lütfen Mail Adresinizi Giriniz!")]
         public string Mail { get; set; }
 
-        [Required(ErrorMessage = "Lütfen Resim Alanını Doldurunuz!")]
         public string ImageUrl { get; set; }
 
         [Required(ErrorMessage = "Lütfen Şifre Giriniz!")]

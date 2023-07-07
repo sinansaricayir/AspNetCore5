@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+}
+
+<h4 class="mb-5">Yazar - Admin Mesajlar</h4>
+
+<div class="box">
+    <a href="/AdminMessage/AddMessage" class="box-item box1">Yeni Mesaj Yaz</a>
+    <a href="/AdminMessage/ReceiverMessage" class="box-item box2">Yazar-Admin Gelen Mesajlar</a>
+    <a href="/AdminMessage/SenderMessage" class="box-item box3">Yazar-Admin Giden Mesajlar</a>
+</div>
+
+
+<style>
+    .box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+        .box .box-item {
+            flex-basis: 30%;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .box .box1 {
+            border: 1px solid red;
+        }
+
+        .box .box2 {
+            border: 1px solid green;
+        }
+
+        .box .box3 {
+            border: 1px solid blue;
+        }
+</style>
+
+
+
