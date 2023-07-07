@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            @using (Html.BeginForm("Index", "ContactInfo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                <br />
+
+                @Html.HiddenFor(x => x.ContactID)
+
+                @Html.Label("Başlık")
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("Açıklama")
+                @Html.TextAreaFor(x => x.Description, 6, 3, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
+
+                <br />
+
+
+                @Html.Label("Mail Adresi")
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Mail, null, new { @class = "text-danger" })
+
+                <br />
+
+                @Html.Label("Telefon Numarası")
+                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Phone, null, new { @class = "text-danger" })
+
+
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-outline-primary px-4 py-2">Güncelle</button>
+                </div>
+
+            }
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
