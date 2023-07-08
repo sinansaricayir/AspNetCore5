@@ -1,0 +1,79 @@
+﻿@using EntityLayer.Concrete
+@model List<SocialMedia>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int row = 1;
+}
+
+
+<div class="d-flex justify-content-end mb-4">
+    <a href="/SocialMedia/AddSocialMedia" class="btn btn-success">+ Yeni Sosyal Medya Ekle</a>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Sosyal Medya</th>
+                                <th>Url</th>
+                                <th>İkon</th>
+                                <th class="text-center">Sil</th>
+                                <th class="text-center">Düzenle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">
+                                        @row
+                                    </th>
+                                    <td class="budget">
+                                        @item.Name
+                                    </td>
+                                    <td class="budget">
+                                        @item.Url
+                                    </td>
+                                    <td class="budget">
+                                        @item.Icon
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="/SocialMedia/EditSocialMedia/@item.SocialMediaID" class="btn btn-outline-primary">Düzenle</a>
+                                    </td>
+                                </tr>
+                                row++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

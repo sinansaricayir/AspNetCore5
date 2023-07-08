@@ -846,3 +846,7 @@ C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Ad
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialNewNavbar.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Admin\PartialNewScript.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\ContactInfo\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\SocialMedia\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\SocialMedia\AddSocialMedia.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\SocialMedia\EditSocialMedia.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\SocialMedia\Default.cshtml.g.cs
