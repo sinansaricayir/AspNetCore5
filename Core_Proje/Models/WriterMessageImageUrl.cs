@@ -12,5 +12,7 @@ namespace Core_Proje.Models
         public string SenderName { get; set; }
         public string MessageContent { get; set; }
         public string ImageUrl { get; set; }
+        public string Subject { get; set; }
+
     }
 }

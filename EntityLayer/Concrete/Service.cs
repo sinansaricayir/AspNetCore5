@@ -10,6 +10,7 @@ namespace EntityLayer.Concrete
 {
    public class Service
     {
+        public static object ConfigureApplicationCookie { get; set; }
         [Key]
         public int ServiceID { get; set; }
         public string Title { get; set; }

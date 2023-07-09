@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core_Proje.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         public IActionResult Index()
@@ -30,9 +32,9 @@ namespace Core_Proje.Controllers
         public PartialViewResult SendMessage()
         {
             return PartialView();
-        }  
-        
-        
+        }
+
+
         [HttpPost]
         public PartialViewResult SendMessage(Message p)
         {
@@ -42,6 +44,6 @@ namespace Core_Proje.Controllers
             messageManager.TAdd(p);
             return PartialView();
         }
-        
+
     }
 }

@@ -37,6 +37,7 @@ namespace Core_Proje.ViewComponents.Dashboard
                             SenderName = item.SenderName,
                             MessageContent = item.MessageContent,
                             ImageUrl = img.ImageUrl,
+                            Subject = item.Subject
                         });
                     }
                 }
