@@ -1,0 +1,108 @@
+﻿@using EntityLayer.Concrete
+@model List<WriterUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLAyout.cshtml";
+}
+
+<div class="col-md-6">
+    <div class="p-2">
+        <button id="getListAll" type="button" class="btn btn-outline-primary">Verileri Getir</button>
+        <button id="getById" type="button" class="btn btn-outline-success ml-2">İd Numarası İle Getir</button>
+    </div>
+</div>
+
+
+<div class="mt-3 p-2">
+    <small class="mr-2">ID Numarası</small>
+    <input type="text" id="inpId" class="bg-dark text-white" />
+</div>
+
+<div class="p-2" id="listUser">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center text-white">No</th>
+                <th class="text-white">Ad</th>
+                <th class="text-white">Soyad</th>
+                <th class="text-white">Kullanıcı Adı</th>
+                <th class="text-white">Email Adresi</th>
+                <th class="text-white">Profil Resmi</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+@section Scripts {
+    <script>
+        $("#getListAll").click(function () {
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "GET",
+                url: "/WriterUser/ListUser/",
+
+                success: function (data) {
+                    let users = JSON.parse(data)
+                    //console.log(users)
+
+                    // Tablo içeriğini temizle
+                    $("#listUser tbody").empty();
+
+                    // Verileri tabloya ekle
+                    for (var i = 0; i < users.length; i++) {
+                        var user = users[i];
+                        var row = "<tr>" +
+                            "<td class='text-center text-white'>" + (i + 1) + "</td>" +
+                            "<td>" + user.Name + "</td>" +
+                            "<td>" + user.Surname + "</td>" +
+                            "<td>" + user.UserName + "</td>" +
+                            "<td>" + user.Email + "</td>" +
+                            "<td class='text-center'><img style='width:75px; height:75px;' src='/userImage/" + user.ImageUrl + "' /></td>" +
+                            "</tr>";
+                        $("#listUser tbody").append(row);
+                    }
+                }
+            })
+
+        });
+
+        $("#getById").click(function () {
+            let id = $("#inpId").val();
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "GET",
+                url: "/WriterUSer/GetById/" + id,
+
+                success: function (data) {
+                    let user = JSON.parse(data);
+                    /* console.log(user);*/
+
+                    //Tablo içeriğini temizle
+                    $("#listUser tbody").empty();
+
+                    var row = "<tr>" +
+                        "<td class='text-center text-white'>" + user.Id + "</td>" +
+                        "<td>" + user.Name + "</td>" +
+                        "<td>" + user.Surname + "</td>" +
+                        "<td>" + user.UserName + "</td>" +
+                        "<td>" + user.Email + "</td>" +
+                        "<td class='text-center'><img style='width:75px; height:75px;' src='/userImage/" + user.ImageUrl + "' /></td>" +
+                        "</tr>";
+
+                    $("#listUser tbody").append(row);
+                }
+            })
+        })
+    </script>
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
