@@ -29,6 +29,7 @@ namespace Core_Proje.Controllers
         public IActionResult GetById(int id)
         {
             var values = JsonConvert.SerializeObject(writerUserManager.TGetById(id));
+            //Birşey döndürmesini istemezsek return NoContent()
             return Json(values);
         }
 

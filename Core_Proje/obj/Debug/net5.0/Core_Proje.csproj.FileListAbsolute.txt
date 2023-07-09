@@ -854,3 +854,4 @@ C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Sh
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\Shared\Components\NavbarNotification\Default.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\ErrorPage\Index.cshtml.g.cs
 C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\WriterUser\Index.cshtml.g.cs
+C:\Users\SSA\source\repos\AspNetCore5\Core_Proje\obj\Debug\net5.0\Razor\Views\ErrorPage\Error404.cshtml.g.cs
