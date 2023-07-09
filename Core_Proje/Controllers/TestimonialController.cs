@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,6 +12,8 @@ using System.Threading.Tasks;
 
 namespace Core_Proje.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class TestimonialController : Controller
     {
         TestimonialManager testimonialManager = new TestimonialManager(new EfTestimonialDal());
