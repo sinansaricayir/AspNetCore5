@@ -51,11 +51,40 @@ namespace Core_Proje.Areas.Writer.Controllers
             }
             user.Name = p.Name;
             user.Surname = p.Surname;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Password()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Password(UserEditViewModel p)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             if (p.Password != null && p.ConfirmPassword != null && p.Password == p.ConfirmPassword)
             {
                 user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, p.Password);
             }
+            else
+            {
+                ModelState.AddModelError("", "Parolalar eşleşmiyor.");
+                return View();
+            }
+
             var result = await _userManager.UpdateAsync(user);
+
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Login");

@@ -40,7 +40,7 @@ namespace Core_Proje.Controllers
         {
             MessageManager messageManager = new MessageManager(new EfMessageDal());
             p.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-            p.Status = true;
+            p.Status = false;
             messageManager.TAdd(p);
             return PartialView();
         }
