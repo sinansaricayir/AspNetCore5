@@ -11,7 +11,7 @@ namespace Core_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
     [Authorize]
-    [Route("Writer/[controller]/[action]")]
+    [Route("Writer/[controller]/[action]/{id?}")]
 
     public class DefaultController : Controller
     {
